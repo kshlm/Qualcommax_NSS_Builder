@@ -9,7 +9,7 @@
 # Upstream OpenWrt source (the tree that will be checked out and built).
 upstream:
   repo: qosmio/openwrt-ipq
-  branch: main-nss
+  branch: 25.12-nss
 
 # NSS packages source. Tracked separately so we can detect package-only updates.
 nss_packages:
@@ -19,7 +19,7 @@ nss_packages:
 # Device id. Must match a directory under devices/<id>/ containing
 #   - config        (the OpenWrt .config file)
 #   - files/        (overlay rootfs, optional)
-device: xiaomi_ax3600
+device: aw1000
 
 # Custom feeds appended to feeds.conf during build. Order matters.
 # Each entry becomes:  src-git <name> <url>
@@ -28,9 +28,11 @@ feeds:
     url: https://github.com/qosmio/packages-extra
   - name: sqm_nss
     url: https://github.com/JuliusBairaktaris/sqm-scripts-nss
+  - name: qmodem
+    url: https://github.com/FUjr/QModem.git
 
 # Release publishing settings.
 release:
-  prefix: main-nss            # tag = <prefix>-<UTC timestamp>-<run id>
+  prefix: 25.12-nss            # tag = <prefix>-<UTC timestamp>-<run id>
   keep: 2                     # number of newest releases to retain (older ones are deleted)
   artifact_retention_days: 7  # how long the GitHub Actions artifact (separate from the release) is kept

@@ -9,13 +9,11 @@ on:
     branches: [main]
     paths:
       - builder.yml
-      - 'devices/**'
-      - 'common/**'
-      - 'patches/**'
-      - 'scripts/**'
-      - '.github/workflows/build.yml'
-  schedule:
-    - cron: "0 */2 * * *"
+      - "devices/**"
+      - "common/**"
+      - "patches/**"
+      - "scripts/**"
+      - ".github/workflows/build.yml"
 
 concurrency:
   group: build-${{ github.ref }}
