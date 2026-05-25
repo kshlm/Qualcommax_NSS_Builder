@@ -9,7 +9,7 @@
 # Upstream OpenWrt source (the tree that will be checked out and built).
 upstream:
   repo: qosmio/openwrt-ipq
-  branch: 25.12-nss
+  branch: main-nss
 
 # NSS packages source. Tracked separately so we can detect package-only updates.
 nss_packages:
@@ -33,6 +33,6 @@ feeds:
 
 # Release publishing settings.
 release:
-  prefix: 25.12-nss            # tag = <prefix>-<UTC timestamp>-<run id>
-  keep: 2                     # number of newest releases to retain (older ones are deleted)
-  artifact_retention_days: 7  # how long the GitHub Actions artifact (separate from the release) is kept
+  prefix: main-nss # tag = <prefix>-<UTC timestamp>-<run id>
+  keep: 2 # number of newest releases to retain (older ones are deleted)
+  artifact_retention_days: 7 # how long the GitHub Actions artifact (separate from the release) is kept
