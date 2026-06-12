@@ -16,7 +16,7 @@ on:
           - edma-nss
         default: all
   push:
-    branches: [main]
+    branches: [my-devices]
     paths:
       - builder.yml
       - "devices/**"

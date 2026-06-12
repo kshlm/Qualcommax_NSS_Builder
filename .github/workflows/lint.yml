@@ -3,16 +3,16 @@ name: Lint
 on:
   workflow_dispatch:
   push:
-    branches: [main]
+    branches: [my-devices]
     paths:
-      - '.github/workflows/**'
-      - 'scripts/**'
-      - 'builder.yml'
+      - ".github/workflows/**"
+      - "scripts/**"
+      - "builder.yml"
   pull_request:
     paths:
-      - '.github/workflows/**'
-      - 'scripts/**'
-      - 'builder.yml'
+      - ".github/workflows/**"
+      - "scripts/**"
+      - "builder.yml"
 
 permissions:
   contents: read
